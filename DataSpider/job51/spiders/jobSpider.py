@@ -16,30 +16,36 @@ class jobSpider(scrapy.Spider):
     # 根据关键字构造初始url
     def start_requests(self):
         murl = "https://search.51job.com/list/000000,000000,0000,00,9,99,{0},2,1.html"
-        # name = input("输入岗位名：")
-        url = murl.format("大数据工程师")
-        # Const.jobName = name
-        yield scrapy.Request(url, callback=self.parse_page)
+        # 构建不同岗位的初始url
+        # 一共114695条数据(大数据41491、python29609、java43595)
+        key_word = ["大数据", "java", "python"]
+        for key in key_word:
+            url = murl.format(key)
+            meta = {"search_key": key}
+            yield scrapy.Request(url, callback=self.parse_page, meta=meta)
 
     # 解析所有页面，并返回岗位URL
     def parse_page(self, responses):
         response = Selector(responses)
         # 获得岗位url
         urls = response.xpath(r'.//div[@class="el"]/p/span/a/@href').extract()
+        meta = responses.meta
         for url in urls:
-            yield scrapy.Request(url, callback=self.parse_url)
+            yield scrapy.Request(url, callback=self.parse_url, meta=meta)
         # 获得下一页url（如果存在）
         next_page = response.xpath(r'.//li[@class="bk"]/a/@href').extract()
         if next_page:
             next_url = next_page[-1]
-            yield scrapy.Request(next_url, callback=self.parse_page)
+            yield scrapy.Request(next_url, callback=self.parse_page, meta=meta)
 
     # 解析岗位url，并返回结构化数据
     def parse_url(self, responses):
         response = Selector(responses)
         head = response.xpath(r'.//div[@class="cn"]')
         no = Parse_ele(head)
-        title = no.xpath_no(r'./h1/@title')
+        # 标题用搜索关键字替代
+        # title = no.xpath_no(r'./h1/@title')
+        title = responses.meta["search_key"]
         salary = no.xpath_no(r'./strong/text()')
         salary = self.changeSalary(salary)
         need = no.xpath_no(r'./p[contains(class, msg)]/@title')
