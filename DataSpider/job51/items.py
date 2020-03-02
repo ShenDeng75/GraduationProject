@@ -11,6 +11,7 @@ import scrapy
 class Job51Item(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    category = scrapy.Field()   # 种类
     title = scrapy.Field()   # 岗位名
     salary = scrapy.Field()   # 工资
     place = scrapy.Field()   # 地点
@@ -18,4 +19,5 @@ class Job51Item(scrapy.Item):
     education = scrapy.Field()   # 学历要求
     need_persons = scrapy.Field()   # 招聘的人数
     publish_date = scrapy.Field()   # 发布日期
+    url = scrapy.Field()   # 岗位的URL
     need_skill = scrapy.Field()   # 需要的技能

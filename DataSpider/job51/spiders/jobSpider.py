@@ -18,7 +18,7 @@ class jobSpider(scrapy.Spider):
         murl = "https://search.51job.com/list/000000,000000,0000,00,9,99,{0},2,1.html"
         # 构建不同岗位的初始url
         # 一共114695条数据(大数据41491、python29609、java43595)
-        key_word = ["大数据", "java", "python"]
+        key_word = ["大数据工程师"]
         for key in key_word:
             url = murl.format(key)
             meta = {"search_key": key}
@@ -43,11 +43,12 @@ class jobSpider(scrapy.Spider):
         response = Selector(responses)
         head = response.xpath(r'.//div[@class="cn"]')
         no = Parse_ele(head)
-        # 标题用搜索关键字替代
-        # title = no.xpath_no(r'./h1/@title')
-        title = responses.meta["search_key"]
+
+        category = responses.meta["search_key"]
+        title = no.xpath_no(r'./h1/@title')
         salary = no.xpath_no(r'./strong/text()')
         salary = self.changeSalary(salary)
+        url = responses.request.url
         need = no.xpath_no(r'./p[contains(class, msg)]/@title')
         needs = str(need).split('|')
         try:
@@ -69,8 +70,8 @@ class jobSpider(scrapy.Spider):
         except Exception as e:
             print("信息获取有误!", e, response.response.url, sep="，")
         needs_skill = "".join([x for x in need_skill if x.strip() != ''])
-        item = Job51Item(title=title, salary=salary, place=place, experience=experience, education=education,
-                         need_persons=need_persons, publish_date=publish_date, need_skill=needs_skill)
+        item = Job51Item(category=category, title=title, salary=salary, place=place, experience=experience, education=education,
+                         need_persons=need_persons, publish_date=publish_date, url=url, need_skill=needs_skill)
         yield item
 
     # 统一工资的单位
