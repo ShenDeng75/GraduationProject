@@ -9,8 +9,9 @@ from job51.items import Job51Item
 from Tools import Parse_ele
 
 
-class jobSpider(scrapy.Spider):
-    name = "jobSpider"
+# 51job(前程无忧)的解析类
+class JobSpider(scrapy.Spider):
+    name = "JobSpider"
     allowed_domains = ['search.51job.com', 'jobs.51job.com']
 
     # 根据关键字构造初始url
@@ -18,7 +19,7 @@ class jobSpider(scrapy.Spider):
         murl = "https://search.51job.com/list/000000,000000,0000,00,9,99,{0},2,1.html"
         # 构建不同岗位的初始url
         # 一共114695条数据(大数据41491、python29609、java43595)
-        key_word = ["大数据工程师"]
+        key_word = ["python"]
         for key in key_word:
             url = murl.format(key)
             meta = {"search_key": key}
@@ -94,5 +95,5 @@ class jobSpider(scrapy.Spider):
 
 if __name__ == "__main__":
     process = CrawlerProcess(get_project_settings())
-    process.crawl('jobSpider')
+    process.crawl('JobSpider')
     process.start()

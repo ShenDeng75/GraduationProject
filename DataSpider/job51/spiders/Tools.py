@@ -37,13 +37,21 @@ class List:
 class Parse_ele:
     def __init__(self, response):
         self.response = response
+
     def xpath_no(self, patt, response=None):
         if not response:
-           response = self.response
+            response = self.response
         try:
-           return response.xpath(patt).extract_first().strip()
+            return response.xpath(patt).extract_first().strip()
         except:
             return "缺失"
+
+
+# cookies格式化
+def cookies2dict(string: str):
+    new_string = '{"' + string.replace("=", '": "').replace("; ", '","') + '"}'
+    cookies_ = dict(eval(new_string))
+    return cookies_
 
 
 # 全局静态变量
