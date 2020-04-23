@@ -9,12 +9,18 @@ set hive.auto.convert.join=true;
 
 use graduation;
 
+-- 查看数据总数
+select count(*)
+from clean;
+
+-- 查看是否有重复数据
 select url, count(url) as counts
-from raw
-where cate='Python'
+from clean
 group by url
 having counts >= 2
 order by counts desc;
 
-select count(*)
-from raw;
+-- 查看education字段清洗效果
+select education, count(education) as counts
+from clean
+group by education;
