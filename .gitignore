@@ -1,0 +1,10 @@
+# 数据文件
+/files/
+
+# idea生成的文件
+/BigData/.idea/
+/DataSpider/.idea/
+*.iml
+
+# python编译产生的缓存文件
+*.py[cod]
