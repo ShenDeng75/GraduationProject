@@ -30,14 +30,15 @@ public class CalReducer extends Reducer<CalKey, Text, Text, Text> {
 
     /**
      * 分词，获取需求关键字
+     *
      * @param needs 招聘信息中的需求
      * @return 分词后的关键字
      */
-    private String splitNeed(String needs){
+    private String splitNeed(String needs) {
         String ans = "";
         JiebaSegmenter segmenter = new JiebaSegmenter();
         List<SegToken> segTokens = segmenter.process(needs.toLowerCase(), JiebaSegmenter.SegMode.INDEX);
-        if (segTokens.size() == 0){
+        if (segTokens.size() == 0) {
             return ans;
         }
         // 构建索引
@@ -63,7 +64,7 @@ public class CalReducer extends Reducer<CalKey, Text, Text, Text> {
             }
         }
         // 如果没有关键字
-        if (last==null){
+        if (last == null) {
             return "NaN";
         }
         result.add(last.word);
@@ -76,22 +77,24 @@ public class CalReducer extends Reducer<CalKey, Text, Text, Text> {
 
     /**
      * 构建索引
+     *
      * @param segTokens 列表
      */
-    private void index(List<SegToken> segTokens){
-        for (SegToken segToken : segTokens){
+    private void index(List<SegToken> segTokens) {
+        for (SegToken segToken : segTokens) {
             map.put(segToken.startOffset, segToken.word);
         }
     }
 
     /**
      * 判断两个单词是否连续, 并且中间是空格
+     *
      * @param front 前一个
      * @param later 后一个
      * @return 是否连续
      */
-    private boolean isSequential(SegToken front, SegToken later){
-        if (later.startOffset - front.endOffset != 1){
+    private boolean isSequential(SegToken front, SegToken later) {
+        if (later.startOffset - front.endOffset != 1) {
             return false;
         }
         return " ".equals(map.get(front.endOffset));

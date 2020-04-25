@@ -15,9 +15,9 @@ public class FileHelper {
     public static void deleteDir(String output, Configuration conf) throws IOException {
         FileSystem fs = FileSystem.get(conf);
         Path outputPath = new Path(output);
-        if (fs.exists(outputPath)){
+        if (fs.exists(outputPath)) {
             fs.delete(outputPath, true);
-            System.out.println("删除了已存在的输出文件："+output);
+            System.out.println("删除了已存在的输出文件：" + output);
         }
     }
 }

@@ -28,10 +28,10 @@ create table if not exists raw
     row format delimited fields terminated by '\t';
 
 -- 导入Java数据
-load data local inpath '/opt/data/graduation/2020-03-02_51Job_java.txt' into table raw partition(cate='Java');
-load data local inpath '/opt/data/graduation/2020-04-10_Lagou_Java.txt' into table raw partition(cate='Java');
+load data local inpath '/opt/data/graduation/2020-03-02_51Job_java.txt' into table raw partition (cate = 'Java');
+load data local inpath '/opt/data/graduation/2020-04-10_Lagou_Java.txt' into table raw partition (cate = 'Java');
 -- 导入大数据数据
-load data local inpath '/opt/data/graduation/2020-03-02_51Job_BigData.txt' into table raw partition(cate='BigData');
-load data local inpath '/opt/data/graduation/2020-04-10_Lagou_BigData.txt' into table raw partition(cate='BigData');
+load data local inpath '/opt/data/graduation/2020-03-02_51Job_BigData.txt' into table raw partition (cate = 'BigData');
+load data local inpath '/opt/data/graduation/2020-04-10_Lagou_BigData.txt' into table raw partition (cate = 'BigData');
 -- 导入Python数据
-load data local inpath '/opt/data/graduation/2020-03-02_51Job_python.txt' into table raw partition(cate='Python');
+load data local inpath '/opt/data/graduation/2020-03-02_51Job_python.txt' into table raw partition (cate = 'Python');

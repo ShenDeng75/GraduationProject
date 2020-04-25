@@ -12,6 +12,7 @@ import java.util.HashMap;
  */
 public class Partition extends Partitioner<CalKey, Text> {
     private static HashMap<String, Integer> partMap = new HashMap<>();
+
     static {
         partMap.put("java", 0);
         partMap.put("python", 1);

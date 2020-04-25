@@ -32,7 +32,7 @@ public class InfoSearchReducer extends Reducer<RecruitInfo, NullWritable, Recrui
         JiebaSegmenter segmenter = new JiebaSegmenter();
         List<String> strings = segmenter.sentenceProcess(need_skill);
         strings.retainAll(edus);
-        if (strings.size() != 0){
+        if (strings.size() != 0) {
             return strings.get(0);
         }
         return "缺失";
@@ -44,7 +44,7 @@ public class InfoSearchReducer extends Reducer<RecruitInfo, NullWritable, Recrui
         if (!edus.contains(key.getEducation())) {
             String edu = getEdu(key.getNeed_skill());
             key.setEducation(edu);
-            System.out.println(key.getUrl()+" : "+edu);
+            System.out.println(key.getUrl() + " : " + edu);
         }
         context.write(key, NullWritable.get());
     }

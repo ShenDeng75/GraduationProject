@@ -38,7 +38,7 @@ public class CalRunner extends Configured implements Tool {
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
         boolean result = job.waitForCompletion(true);
-        return result?0:1;
+        return result ? 0 : 1;
     }
 
     public static void main(String[] args) throws Exception {
