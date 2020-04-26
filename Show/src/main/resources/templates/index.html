@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>基于Hadoop的招聘信息检索系统</title>
+    <script src="../static/js/jquery.min.js" type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+</head>
+<body>
+<div style="text-align: center">
+    <input type="text" name="keys" style="width: 500px; text-align: center" placeholder="输入技能点">
+    <button type="button" onclick="search_keys()">搜索</button>
+</div>
+<br/>
+<div id="show" style="text-align: center"></div>
+<script type="text/javascript">
+    function search_keys() {
+        var keys = $("input[name='keys']").val();
+        var data = new FormData();
+        data.append("keys", keys);
+        $.ajax({
+            url: "/getURL",
+            method: "post",
+            // dataType: "json",
+            // async: false,
+            data: data,
+            contentType: false,// 告诉jQuery不要去设置Content-Type请求头
+            processData: false,// 告诉jQuery不要去处理发送的数据
+            success: function (result) {
+                do_success(result);
+            }
+        });
+    }
+
+    function do_success(result) {
+        console.log(result);
+        var tbody = $("#show");
+        tbody.empty();
+        var datas = result.result;
+        $.each(datas, function (index, item) {   // 遍历行
+            var div = $("<div></div>");
+            var str = "<a href='" + item + "' target='view_window'></a>>";
+            var a = $(str).append(item);
+            div.append(a);
+            tbody.append(div);
+        });
+    }
+</script>
+</body>
+</html>
