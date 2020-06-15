@@ -41,7 +41,7 @@ public class InfoSearchRunner extends Configured implements Tool {
     }
 
     public static void main(String[] args) throws Exception {
-        // args = new String[]{"D:\\temp\\inputs\\graduation", "D:\\temp\\outputs\\graduation"};
+         args = new String[]{"D:\\temp\\inputs\\graduation\\clean", "D:\\temp\\outputs\\graduation\\clean2"};
         int result = ToolRunner.run(new InfoSearchRunner(), args);
         System.exit(result);
     }

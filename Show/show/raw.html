@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>基于Hadoop的招聘信息检索系统</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <style>
+        div{float: left;}
+    </style>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:600px;"></div>
+    <div id="main2" style="width: 900px;height:600px;"></div>
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var myChart2 = echarts.init(document.getElementById('main2'));
+
+        // 指定图表的配置项和数据
+        
+        // 大类分布
+        var option = {
+            title: {
+                text: '原始招聘信息数据大类分布',
+                subtext: '总计 137907条'
+
+            },
+            // tooltip: {},
+            // legend: {
+            //     data:['数量']
+            // },
+            xAxis: {
+                data: ["Java", "大数据", "Python"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: [60752, 47137, 30018],
+                itemStyle: {
+                                normal: {
+                                    color: "#EE4000",
+                                    label: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: '#EE4000',
+                                            fontSize: 16
+                                        }
+                                    }
+                                }
+                            }
+            }]
+        };
+        // 地区分布
+        var option2 = {
+            title: {
+                text: '原始招聘信息数据地区分布 (前十)',
+                subtext: '总计 137907条'
+
+            },
+            // tooltip: {},
+            // legend: {
+            //     data:['数量']
+            // },
+            xAxis: {
+                data: ["上海","广州","深圳","北京","杭州","成都","南京","武汉","苏州","西安"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: [26487,14978,14837,12503,7687,6273,6091,5990,3123,2961],
+                itemStyle: {
+                                normal: {
+                                    color: "#6E8B3D",
+                                    label: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: '#6E8B3D',
+                                            fontSize: 16
+                                        }
+                                    }
+                                }
+                            }
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        myChart2.setOption(option2);
+    </script>
+</body>
+</html>

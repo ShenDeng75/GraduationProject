@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c45f63e-6f87-4c69-a811-b64732f57b18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/conf/dict.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/calculate/show/NeedMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/calculate/show/NeedReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/calculate/show/NeedRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Show/show/clean.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Show/show/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Show/show/raw.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Show/show/数据清洗.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cleaning/InfoSearchReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cleaning/InfoSearchReducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cleaning/InfoSearchRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cleaning/InfoSearchRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/import2hive/ImportCleaning.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/import2hive/ImportCleaning.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/import2hive/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/import2hive/query.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Show/src/main/java/shendeng/graduation/show/JDBCHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Show/src/main/java/shendeng/graduation/show/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Show/src/main/java/shendeng/graduation/show/ShowApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Show/src/main/java/shendeng/graduation/show/ShowApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Show/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Show/src/main/resources/templates/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="graduation" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="graduation" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="graduation" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="graduation: schema" type="31331dd0:HiveImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="graduation" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="graduation: schema" type="31331dd0:HiveImplModel$Schema" />
+        <item name="raw: table" type="1da66f9e:HiveImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="git@github.com:ShenDeng75/GraduationProject.git" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Java_dev/Maven35" />
+        <option name="userSettingsFile" value="D:\Java_dev\Maven35\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1YWSskK5O6PFp28wujMC4q24NJ0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="hive" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.23793103" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\GraduationProject\BigDataHandler\target\classes" />
+      <recent name="D:\Code\GraduationProject\BigDataHandler\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.NeedRunner">
+    <configuration name="CalRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="calculate.CalRunner" />
+      <module name="BigDataHandler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InfoSearchRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cleaning.InfoSearchRunner" />
+      <module name="BigDataHandler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cleaning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JieBaTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="calculate.JieBaTest" />
+      <module name="BigDataHandler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NeedRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="calculate.show.NeedRunner" />
+      <module name="BigDataHandler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="calculate.show.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Study" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Study" />
+      <module name="BigDataHandler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NeedRunner" />
+        <item itemvalue="Application.InfoSearchRunner" />
+        <item itemvalue="Application.Study" />
+        <item itemvalue="Application.CalRunner" />
+        <item itemvalue="Application.JieBaTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.20423497" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:graduation" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:graduation" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6b9ac9e2" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c45f63e-6f87-4c69-a811-b64732f57b18" name="Default Changelist" comment="" />
+      <created>1583057065645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583057065645</updated>
+      <workItem from="1583057068184" duration="1463000" />
+      <workItem from="1586399968558" duration="1318000" />
+      <workItem from="1586508095012" duration="7779000" />
+      <workItem from="1587094498152" duration="23664000" />
+      <workItem from="1587377106222" duration="28234000" />
+      <workItem from="1587821080055" duration="133000" />
+      <workItem from="1588661812342" duration="4705000" />
+      <workItem from="1588669246704" duration="2518000" />
+      <workItem from="1588728470543" duration="20000" />
+      <workItem from="1588930844636" duration="6252000" />
+      <workItem from="1589290630550" duration="4233000" />
+    </task>
+    <task id="LOCAL-00001" summary="数据清洗(去重、清洗education列)">
+      <created>1587202628708</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587202628708</updated>
+    </task>
+    <task id="LOCAL-00002" summary="将清洗后的数据导入到Hive中">
+      <created>1587632433085</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587632433085</updated>
+    </task>
+    <task id="LOCAL-00003" summary="数据计算，实现关键字提取">
+      <created>1587787775630</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587787775630</updated>
+    </task>
+    <task id="LOCAL-00004" summary="数据计算，实现关键字提取">
+      <created>1587821208582</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587821208582</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="数据清洗(去重、清洗education列)" />
+    <MESSAGE value="将清洗后的数据导入到Hive中" />
+    <MESSAGE value="数据计算，实现关键字提取" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据计算，实现关键字提取" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="91" key="#Project_Structure" timestamp="1583075113676">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="91" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1583075113676" />
+    <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586513914119">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1586513914119" />
+    <state x="512" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587094859362">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="512" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1587094859362" />
+    <state x="574" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1589332110337">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="574" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1589332110337" />
+    <state x="404" y="39" key="CommitChangelistDialog2" timestamp="1587821208052">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="404" y="39" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1587821208052" />
+    <state x="197" y="86" key="DiffContextDialog" timestamp="1587821181092">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="197" y="86" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1587821181092" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1589356898737">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589356898737" />
+    <state width="1493" height="236" key="GridCell.Tab.0.bottom" timestamp="1589335657912">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589335657912" />
+    <state width="1493" height="236" key="GridCell.Tab.0.center" timestamp="1589335657912">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589335657912" />
+    <state width="1493" height="236" key="GridCell.Tab.0.left" timestamp="1589335657912">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589335657912" />
+    <state width="1493" height="236" key="GridCell.Tab.0.right" timestamp="1589335657912">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="236" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589335657912" />
+    <state width="1493" height="266" key="GridCell.Tab.1.bottom" timestamp="1588671110906">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588671110906" />
+    <state width="1493" height="266" key="GridCell.Tab.1.center" timestamp="1588671110906">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1588671110906" />
+    <state width="1493" height="266" key="GridCell.Tab.1.left" timestamp="1588671110906">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1588671110906" />
+    <state width="1493" height="266" key="GridCell.Tab.1.right" timestamp="1588671110906">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1588671110906" />
+    <state x="249" y="7" key="SettingsEditor" timestamp="1586508340528">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="249" y="7" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586508340528" />
+    <state x="884" y="182" width="561" height="524" key="StructurePopup" timestamp="1587095065901">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="884" y="182" width="561" height="524" key="StructurePopup/0.0.1536.864@0.0.1536.864" timestamp="1587095065901" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1587787778135">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1587787778135" />
+    <state x="178" y="127" key="new project wizard" timestamp="1589356979753">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="178" y="127" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1589356979753" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587710759008">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587710759008" />
+  </component>
+</project>

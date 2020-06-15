@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="graduation" uuid="07ba63f9-31ad-4e89-ae04-4467b01fba6c">
+      <database-info product="Apache Hive" version="1.2.2" jdbc-version="3.0" driver-name="" driver-version="" dbms="HIVE" exact-version="1.2.2" exact-driver-version="1.1" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>shendeng</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="graduation" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

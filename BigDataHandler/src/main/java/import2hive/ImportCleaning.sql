@@ -26,7 +26,7 @@ create external table if not exists clean
     row format delimited fields terminated by '\t';
 
 -- 导入数据
-load data inpath '/graduation/clean/part-r-00000' into table clean;
+load data inpath '/graduation/clean/clean_data.txt' overwrite into table clean;
 
 select *
 from clean;

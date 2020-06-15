@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>基于Hadoop的招聘信息检索系统</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <style>
+        div{float: left;}
+    </style>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 500px;height:600px;"></div>
+    <div id="main2" style="width: 1000px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var myChart2 = echarts.init(document.getElementById('main2'));
+
+        // 指定图表的配置项和数据
+        // 去重效果
+        var option = {
+            title: {
+                text: '清洗前后去重效果'
+            },
+            // tooltip: {},
+            // legend: {
+            //     data:['数量']
+            // },
+            xAxis: {
+                data: ["去重前", "去重后"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: [137907, 115183],
+                itemStyle: {
+                                normal: {
+                                    color: "#EE4000",
+                                    label: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: '#EE4000',
+                                            fontSize: 16
+                                        }
+                                    }
+                                }
+                            }
+            }]
+        };
+        // 学历字段清洗效果
+        var option2 = {   //数量
+                        title: {
+                            text: '学历要求字段清洗对比',
+                            subtext:'总量：115183条',
+                        },
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        legend: {  //标签
+                            data: ['清洗前', '清洗后']
+                        },
+                        toolbox: {  //工具栏
+                            show: true,
+                            feature: {
+                                mark: { show: true },
+                                dataView: { show: true, readOnly: false },
+                                magicType: { show: true, type: ['line', 'bar'] },
+                                restore: { show: true },
+                                saveAsImage: { show: true }
+                            }
+                        },
+                        calculable: true,
+                        xAxis: {  //x轴
+                            data: ["本科","专科","缺失","硕士","高中","博士"],
+                            axisLabel: {  //字体样式
+                                show: true,
+                                textStyle: {
+                                    color: '#000000',
+                                    fontSize: '14'
+                                }
+                            },
+                            // 控制网格线是否显示
+                            splitLine: {
+                                show: true,
+                                //  改变轴线颜色
+                                lineStyle: {
+                                    // 使用深浅的间隔色
+                                    color: ['#778899']
+                                }
+                            }
+                        },
+                        yAxis: [{ //y轴
+                            // name: "数量(条)",
+                            axisLabel: {  //字体样式
+                                show: true,
+                                textStyle: {
+                                    color: '#000000',
+                                    fontSize: '14'
+                                }
+                            },
+                        }
+                        ],
+                        series: [
+                        { // 清洗前
+                            name: '清洗前',
+                            type: 'bar',
+                            data: [47729, 28541, 33944, 3201, 1424, 344],
+                            itemStyle: {
+                                normal: {
+                                    color: "#EE4000",
+                                    label: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: '#EE4000',
+                                            fontSize: 16
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {  // 清洗后
+
+                            name: '清洗后',
+                            type: 'bar',
+                            data: [60792, 33541, 14157, 4201, 2124, 368],
+                            itemStyle: {
+                                normal: {
+                                    color: "#006400",
+                                    label: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: '#006400',
+                                            fontSize: 16
+                                        }
+                                    }
+                                }
+                            },
+                            }
+                        ]
+                    };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        myChart2.setOption(option2);
+    </script>
+</body>
+</html>

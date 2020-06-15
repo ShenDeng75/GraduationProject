@@ -11,7 +11,7 @@ import java.util.*;
  * @describe 数据库访问层
  * @datetime 2020/4/25 22:12
  */
-public class JDBCHelper {
+public class Server {
     private static Connection conn;
     private static Statement statement;
     private static final String username = "root";
@@ -40,7 +40,7 @@ public class JDBCHelper {
             table = "bigdata";
         }
         try {
-            String sql = "select * from " + table + " limit 20";
+            String sql = "select * from " + table;
             resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 map.put(resultSet.getString(1), resultSet.getString(2));

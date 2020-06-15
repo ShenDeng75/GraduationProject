@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>基于Hadoop的招聘信息检索系统</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <!-- <style>
+        div{float: left;}
+    </style> -->
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <!-- <div id="main" style="width: 600px;height:600px;"></div> -->
+    <div id="main2" style="width: 1500px;height:600px;"></div>
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        // var myChart = echarts.init(document.getElementById('main'));
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        
+        var option2 = {
+            title: {
+                text: 'Java岗位任职要求技能 (前14)'
+            },
+            // tooltip: {},
+            // legend: {
+            //     data:['数量']
+            // },
+            xAxis: {
+                data: ["java","mysql","oracle","linux","spring","sql","web","mybatis","javascript","redis","springmvc","springboot","jquery","tomcat"]
+            },
+            yAxis: {},
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: [49165,20274,16705,13863,12980,11935,11413,10480,10468,8814,8756,8124,7787,7045],
+                
+                // barWidth : 30,
+                itemStyle: {
+                                normal: {
+                                    color: "#6E8B3D",
+                                    label: {
+                                        show: true, //开启显示
+                                        position: 'top', //在上方显示
+                                        textStyle: { //数值样式
+                                            color: '#6E8B3D',
+                                            fontSize: 16
+                                        }
+                                    }
+                                }
+                            }
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        // myChart.setOption(option);
+        myChart2.setOption(option2);
+    </script>
+</body>
+</html>

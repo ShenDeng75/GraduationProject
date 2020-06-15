@@ -9,7 +9,23 @@ set hive.auto.convert.join=true;
 
 use graduation;
 
+-- 查看原始数据大类分布
+select category, count(*)
+from raw
+group by category;
+
+-- 查看原始数据的地区分布
+select place, count(place) as cnt
+from raw
+group by place
+order by cnt desc
+limit 10;
+
+
 -- 查看数据总数
+select count(*)
+from raw;
+
 select count(*)
 from clean;
 
@@ -21,6 +37,10 @@ having counts >= 2
 order by counts desc;
 
 -- 查看education字段清洗效果
+select education, count(education) as counts
+from raw
+group by education;
+
 select education, count(education) as counts
 from clean
 group by education;

@@ -1,10 +1,12 @@
 package cleaning;
 
 import com.huaban.analysis.jieba.JiebaSegmenter;
+import com.huaban.analysis.jieba.WordDictionary;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +21,7 @@ public class InfoSearchReducer extends Reducer<RecruitInfo, NullWritable, Recrui
 
     @Override
     protected void setup(Context context) throws IOException, InterruptedException {
-        edus.addAll(Arrays.asList("博士", "硕士", "本科", "大专", "高中", "中专"));
+        edus.addAll(Arrays.asList("博士", "硕士", "本科", "专科", "大专", "高中", "中专", "大学本科", "大学专科"));
     }
 
     /**
@@ -30,10 +32,15 @@ public class InfoSearchReducer extends Reducer<RecruitInfo, NullWritable, Recrui
      */
     private String getEdu(String need_skill) {
         JiebaSegmenter segmenter = new JiebaSegmenter();
+        WordDictionary.getInstance().init(Paths.get("conf"));
         List<String> strings = segmenter.sentenceProcess(need_skill);
         strings.retainAll(edus);
         if (strings.size() != 0) {
-            return strings.get(0);
+            String edu = strings.get(0);
+            if (edu.length() == 4){
+                return edu.substring(2, 4);
+            }
+            return edu;
         }
         return "缺失";
     }

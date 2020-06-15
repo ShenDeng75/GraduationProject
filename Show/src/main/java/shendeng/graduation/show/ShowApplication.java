@@ -25,9 +25,9 @@ public class ShowApplication {
 
     @PostMapping("/getURL")
     @ResponseBody
-    public JSONObject getURL(@RequestParam("keys") String keys){
+    public JSONObject getURLs(@RequestParam("keys") String keys){
         Map<String, List<String>> result = new HashMap<>();
-        List<String> urls = JDBCHelper.search(keys);
+        List<String> urls = Server.search(keys);
         result.put("result", urls);
         return new JSONObject().fluentPutAll(result);
     }
